@@ -1,0 +1,13 @@
+parsonas:
+  - persona:
+      nombre   : "aaa"
+      direccion: "bbb"
+      telefono : "ccc"
+  - persona:
+      nombre   : "ddd"
+      direccion: "eee"
+      telefono : "fff"
+  - persona:
+      nombre   : "ggg"
+      direccion: "hhh"
+      telefono : "iii"

@@ -1,0 +1,17 @@
+<personas>
+	<persona>
+		<nombre>aaa</nombre>
+		<direccion>bbb</direccion>
+		<telefono>ccc</telefono>
+	</persona>
+	<persona>
+		<nombre>ddd</nombre>
+		<direccion>eee</direccion>
+		<telefono>fff</telefono>
+	</persona>
+	<persona>
+		<nombre>ggg</nombre>
+		<direccion>hhh</direccion>
+		<telefono>iii</telefono>
+	</persona>
+</personas>

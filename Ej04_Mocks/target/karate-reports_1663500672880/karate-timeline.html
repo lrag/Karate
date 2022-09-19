@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[1:9]","start":1663493323063,"end":1663493323467,"title":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[1:9] 11:28:43.063-11:28:43.467 Escenario 1"},{"id":2,"group":1,"content":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[2:13]","start":1663493323475,"end":1663493323478,"title":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[2:13] 11:28:43.475-11:28:43.478 Ascenario 2"},{"id":3,"group":1,"content":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[3:17]","start":1663493323483,"end":1663493323485,"title":"src\/test\/java\/com\/curso\/integracion\/10_ciclo_de_vida[3:17] 11:28:43.483-11:28:43.485 Escenario 3"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
