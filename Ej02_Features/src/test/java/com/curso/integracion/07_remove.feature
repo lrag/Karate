@@ -23,6 +23,25 @@ And remove avionJson.id
 And remove avionJson.fabricante.id
 Then print avionJson
 
+#En este ejemplo eliminamos la propiedad de un documento que está en un array
+Given def aviones =
+		"""
+		[		{ 
+			id         : 4,
+			modelo     : 'F-14', 
+		}, 		
+		{ 
+			id         : 7,
+			modelo     : 'Spitfire', 
+		}, 		
+		{ 
+			id         : 74,
+			modelo     : 'BF-109', 
+		} 	]		
+		"""		
+And remove aviones[1].id
+And print aviones
+
 #Tambien sirve para XML
 Given def avionXML =
 		"""

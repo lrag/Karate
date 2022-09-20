@@ -4,9 +4,6 @@ Feature: Features.
  
 Scenario: funciones javascript
 
-#Rutas absolutas
-#
-
 #Rutas relativas a la ubicación del Feature
 
 #Json
@@ -30,6 +27,12 @@ And replace persona
 	  | direccion | 'Salamanca' |
 	  | telefono  | '923123456' | 
 Then print persona
+
+#Rutas absolutas
+#Ni mejores, ni peores
+Given def personas = read('classpath:com/curso/testdata/personas.json')
+And print personas
+
 
 
 

@@ -3,11 +3,16 @@ Feature: Pruebas de jsonplaceholder typicode.
   Bla bla blá.
  
 Scenario: Tipos
+#Con def podemos asignar como valor a la variable:
+#-números
+#-cadenas de texto de una única línea
 
 Given def numero = 1234
 And def texto  = 'hola áéíóú'
 
 #Texto multilínea
+#Karate interpreta los bloques multilínea cono JSON o XML
+#Si el contenido del bloque no está en ese formato lo indicamos definiendo la variabla con 'text'
 And text parrafo = 
 		"""
 		aaaaaa
@@ -59,46 +64,43 @@ And def xml2 =
 #
 #CSV: Convierte un string con formato CSV a JSON
 #
-And text csv = 
+#And text csv = 
+And csv csv_a_json = 
 		"""
 		titulo,director
 		Alien,Ridley Scott
 		2001,Stanley Kubrik
 		"""
-And csv csv_a_json = csv
-And print csv
 And print csv_a_json
 
 #
 #YAML: Convierte un string con formato YAML a JSON
 #
 #Cuidado con los tabuladores en un yaml
-And text yaml =
+And yaml yaml_a_json = 
 		"""
 		producto:
 		  nombre: "Fleje"
 		  fabricante: "Ibérica de Flejes, S.A."		  
 		"""
-And yaml yaml_a_json = yaml
-And print yaml
 And print yaml_a_json
 
 #
-#Utilizando expresiones
+#Expresiones: útil para componer documentos 
 #
 And def obj = { marca : 'Fiat', modelo : "Uno 45s", matricula : "M-1234-JP" }  
 
-And def v = { coche : #(obj) }
-And def w = <movida>#(obj)</movida>
-And def x = { marcaCoche : #(obj.marca) }
+And def exp1 = { coche : #(obj) }
+And def exp2 = <movida>#(obj)</movida>
+And def exp3 = { marcaCoche : #(obj.marca) }
 
 #Enclosed JS (solo para json)
-And def y = ({ marcaCoche : obj.marca }) 
-And def z = ({ coche : obj})
+And def exp4 = ({ marcaCoche : obj.marca }) 
+And def exp5 = ({ coche : obj})
 
-Then print v
-And  print w
-And  print x
-And  print y
-And  print z
+Then print exp1
+And  print exp2
+And  print exp3
+And  print exp4
+And  print exp5
 
