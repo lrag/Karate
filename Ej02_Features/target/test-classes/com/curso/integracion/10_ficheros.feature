@@ -4,6 +4,9 @@ Feature: Features.
  
 Scenario: funciones javascript
 
+#Rutas absolutas
+#
+
 #Rutas relativas a la ubicación del Feature
 
 #Json

@@ -3,7 +3,7 @@ Feature: Pruebas de jsonplaceholder typicode.
   Bla bla blá.
  
 #Cada feature puede tener varios escenarios
-#Un escerario deberá hacer una única prueba funcional
+#Un escerario deberá hacer una única prueba de integracion/funcional
 #El nombre ha de ser descriptivo
 Scenario: Enviar una petición para obtener los posts
 

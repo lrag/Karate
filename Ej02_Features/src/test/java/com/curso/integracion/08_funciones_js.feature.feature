@@ -4,9 +4,13 @@ Feature: Features.
  
 Scenario: funciones javascript
 
+#No hay una palabra reservada para definir una función. Se utiliza def
 Given def saludador = function(nombre) { return 'Hola '+nombre }
+
+#Invocamos la función colocando los paréntis a la variable que la guarda
 And def saludo = saludador('LRAG')
 And print saludo
+And print saludador('Bart')
 
 And def mayusculas = 
 		"""

@@ -24,6 +24,7 @@ Scenario: Match arrays
 Given	def array = [ 1, 2, 3, 4, 5 ]
 Then match array contains 3
 And match array contains [ 3, 4 ]
+#El orden no importa
 Then match array contains [ 4, 3 ]
 
 

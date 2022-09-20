@@ -22,7 +22,7 @@ And replace cocheJson.matricula = '1234-BLM'
 And print cocheJson
 
 #YA se han reemplazado los <-> por los valores así que necesitamos otra variable
-And def cocheJson =
+And def otroCocheJson =
 		"""
 		{ 
 			"marca" : <marca>, 
@@ -33,10 +33,10 @@ And def cocheJson =
 #Otra manera de sustituir los valores
 #Tambien se pueden utilizar variables (matricula)
 And def matricula = 'M-1234-IY'
-And replace cocheJson
+And replace otroCocheJson
 	  | token     | value     |
 	  | marca     | 'Renault' |
 	  | modelo    | '21 TXE'  |
 	  | matricula | matricula | 
 	  
-And print cocheJson
+And print otroCocheJson

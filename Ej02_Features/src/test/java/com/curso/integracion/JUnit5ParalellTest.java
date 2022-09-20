@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
 
-public class Junit5Test2 {
+public class JUnit5ParalellTest {
 
     @Test
     void testParallel() {
