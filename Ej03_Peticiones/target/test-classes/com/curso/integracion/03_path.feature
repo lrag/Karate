@@ -1,5 +1,5 @@
 #Feature
-Feature: Pruebas de jsonplaceholder typicode.
+Feature: Peticiones 3.
   Bla bla blá.
  
 Background: 
@@ -21,8 +21,11 @@ And print response
 
 Scenario: Y otro
 Given def id = 2
-#Otra manera, quizás más legible. Se pueden añadir mas valores a la ruta
-And path 'users', id
+#Otra manera, quizás más legible cuando en la ruta hay más de dos carpetas. 
+And url 'http://localhost:8080'
+And def idCliente = 15
+#Esto es equivalente a 'clientes/15/facuras'
+And path 'clientes', idCliente, 'facturas' 
 When method GET
 Then status 200
 And print response

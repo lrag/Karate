@@ -1,0 +1,108 @@
+
+Protocolo HTTP
+
+-Los mensajes son textos Texto
+-Los mensajes solo tienen dos partes
+	-Head (obligatorio)
+	-Body (opcional)
+	-La separación entre head y body son dos saltos de línea y retorno de carro seguidos
+	
+Recursos organizados en carpetas/directorios reales o imaginarios
+
+Peticion HTTP
+
+Ruta a uno o varios recursos
++
+Método HTTP
+
+Métodos HTTP:
+
+GET    : Solicita un recurso existente en el servidor
+POST   : Añade un recurso al servidor
+PUT    : Sustituya un recurso por otro
+PATCH  : Modifica un recurso
+DELETE : Elimina un recurso 
+-----------
+HEAD
+OPTIONS
+...
+
+
+Servicio REST
+
+-Definir los recursos
+Clientes
+Facturas
+Empleados
+Productos
+...
+
+-Asignar una representación a los recursos
+JSON <--
+XML  
+
+No hay que obsesionarse con que la representación de un recurso sea siempre la misma
+
+{
+	id :
+	nombre :
+	direccion : {
+	
+	}
+	telefono :
+	comercial :
+}
+
+-Se asignan carpetas a los recursos
+
+/productos
+	prod1
+	prod2
+	prod4
+/clientes
+	cli2
+	cli3
+/facturas
+	fra1
+	fra2
+/empleados
+	emp1
+	emp2
+	
+	
+GET /clientes
+GET /clientes/cli3
+
+METODO RUTA             Peticion    Respuesta
+GET    /productos       -           [{json}]   Listar productos
+GET    /productos/{id}  -           {json}     buscar producto por id
+POST   /productos       {json}                 insertar producto
+PUT    /productos/{id}  {json}                 modificar producto
+DELETE /productos/{id}  -                      borrar producto
+
+DELETE /productos                              NO IMPLEMENTADO!
+
+SWAGGER
+RAML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

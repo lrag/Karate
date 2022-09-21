@@ -2,12 +2,13 @@
 Feature:
 
 Background:
-* def uuid = function(){ return java.util.UUID.randomUUID() + '' }
-
 
 #
 #Definiremos primero los escenarios más concretos
 #
+
+Scenario: pathMatches('/saludador') && methodIs('get')
+		* def response = 'Hola mundo'
 
 Scenario: pathMatches('/coches') && methodIs('get') && paramExists('marca') && paramExists('year')
     * def response = 
@@ -29,7 +30,8 @@ Scenario: pathMatches('/coches') && methodIs('get')
     ]
     """
 
-Scenario: pathMatches('/coches/2') && methodIs('get')
+Scenario: pathMatches('/coches/{idCoche}') && methodIs('get')
+		#Por defecto el status es 200
     * def response = { id:2, marca : 'Citroën',   modelo:'Ami 6' }
     
 Scenario: pathMatches('/coches') && methodIs('post')
@@ -37,6 +39,9 @@ Scenario: pathMatches('/coches') && methodIs('post')
 
 Scenario: pathMatches('/coches') && methodIs('delete')
     * def responseStatus = 200
+    
+Scenario: pathMatches('/clientes/{idCliente}/facturas') && methodIs('get')
+		* def response = [ { codigo : 'FAC-1' }, { codigo : 'FAC-2' }, { codigo : 'FAC-3' } ] 
     
 Scenario: pathMatches('/productos') && headerContains('Authorization', 'Basic abcd')
 		* def responseStatus = 200

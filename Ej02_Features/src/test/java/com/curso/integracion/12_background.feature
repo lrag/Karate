@@ -2,7 +2,7 @@
 Feature: Features.
   Bla bla blá.
 
-#Backgrond se ejecuta antes de cada escenario del feature
+#Background se ejecuta antes de cada escenario del feature
 Background:
 * print "Background"
 * def dato1 = 1

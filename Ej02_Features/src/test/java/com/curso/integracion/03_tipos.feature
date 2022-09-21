@@ -8,6 +8,7 @@ Scenario: Tipos
 #-cadenas de texto de una única línea
 
 Given def numero = 1234
+#Cadenas de texto de una sola línea
 And def texto  = 'hola áéíóú'
 
 #Texto multilínea

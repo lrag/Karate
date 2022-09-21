@@ -12,15 +12,13 @@ public class Utilidades {
 	public static String mayusculas(String txt) {
 		return txt.toUpperCase();		
 	}
-	
-	/*
+
 	public Persona metodo(Persona persona) {
 		persona.setNombre(persona.getNombre().toUpperCase());
 		persona.setDireccion(persona.getDireccion().toUpperCase());
 		persona.setTelefono(persona.getTelefono().toUpperCase());
 		return persona;
 	}
-	*/
 
 	public Map<String, String> metodo(Map<String, String> persona) {
 		persona.put("nombre", persona.get("nombre").toUpperCase());
