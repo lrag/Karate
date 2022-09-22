@@ -1,5 +1,5 @@
 #Feature
-Feature: Obtiene un token de autenticacion
+Feature: Api de peliculas
   Bla bla blá.
 
 Background:

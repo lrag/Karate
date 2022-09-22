@@ -4,6 +4,7 @@ Feature: Obtiene un token de autenticacion
 
 Background:
 # En este caso no es necesario obtener un token nuevo por cada escenario
+# Callonce en Background implica que se ejecuta una vez por todo el feature
 * def ejecucion = callonce read('04_obtener_JWT.feature') 
 * def jwt = ejecucion.jwt
 * url 'http://localhost:8090'

@@ -19,12 +19,25 @@ Scenario:
   Then status 201
   
 Scenario:
+#peliculas tablien podría ser un json [ {},{},{} ]
 * table peliculas 
   | titulo         | director        |
   | 'Titulo 10'    | 'Director 10'   |
   | 'Titulo 11'    | 'Director 11'   |
   | 'Titulo 12'    | 'Director 12'   |
+  #'ejecucion' es un array que guarda el resultado de cada una de las ejecuciones
+  #En este ejemplo tiene 3
 * def ejecucion = call read('@InsertarCoche') peliculas
+* print ejecucion
 * def peliculasCreadas = $ejecucion[*].response
+
 * match each peliculasCreadas == { id: '#number', titulo: '#string', director: '#string', genero : '#ignore', year: '#ignore' }
+
 * match peliculasCreadas[*].titulo contains only ['Titulo 10', 'Titulo 11', 'Titulo 12']
+
+
+
+
+
+
+

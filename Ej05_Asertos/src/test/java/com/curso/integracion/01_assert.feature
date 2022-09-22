@@ -11,6 +11,8 @@ Then  assert response == 'Hola mundo'
 And   assert response.toUpperCase() == 'HOLA MUNDO'
 #Longitud de una cadena de texto: .length
 And   assert response.length == 10
+And   assert response.length != 11
+And   assert response.length < 11
 
 
 Scenario: Assert 2

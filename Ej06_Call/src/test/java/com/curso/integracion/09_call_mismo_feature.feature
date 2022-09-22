@@ -14,7 +14,7 @@ And def jwt = response
 And print jwt
 
 Scenario: Buscar pelicula
-* call read('@ObtenerJWT')
+* call read('@ObtenerJWT') 
 Given url 'http://localhost:8090/peliculas/2'
 And header Authorization = 'Bearer '+jwt
 When method GET

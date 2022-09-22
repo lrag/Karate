@@ -9,6 +9,8 @@ And form field password = 'fox'
 When method POST
 Then status 200 
 And def jwt = response
+#Si el token viniera en un header lo recogeríamos así:
+#And def jwt = responseHeaders['Authorization']
 And print response
 
 Given url 'http://localhost:8090/peliculas'

@@ -27,6 +27,14 @@ import com.curso.serviciodto.PeliculaDto;
 @RequestMapping(path="peliculas")
 public class PeliculasRest {
 
+	/*
+	GET /peliculas
+	GET /peliculas/{id}
+	POST /peliculas
+	PUT /peliculas/{id}
+	DELETE /peliculas/{id}	
+	*/
+	
 	@Autowired
 	private GestorPeliculas gestorPeliculas;
 	

@@ -7,6 +7,8 @@ Background:
 # def ejecucion = call read('classpath://com/curso/integracion/04_obtener_JWT.feature') 
 * def ejecucion = call read('04_obtener_JWT.feature') 
 * def jwt = ejecucion.jwt
+* print ejecucion.dato1
+* print ejecucion.dato2
 * url 'http://localhost:8090'
 
 Scenario: Listar peliculas
