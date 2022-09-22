@@ -8,6 +8,8 @@ Background:
 Scenario: Cookies
 Given path '/coches'
 And cookie SESSIONID = '1A530637289A03B07199A44E8D531427'
+And cookie cookie1 = 'aaa'
+And cookie cookie2 = 'bbb'
 When method GET
 Then status 200
 And print response
@@ -19,3 +21,14 @@ And cookies { SESSIONID:'1A530637289A03B07199A44E8D531427', cookie1:'aaa', cooki
 When method GET
 Then status 200
 And print response
+
+
+
+
+
+
+
+
+
+
+

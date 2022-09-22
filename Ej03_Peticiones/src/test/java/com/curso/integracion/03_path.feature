@@ -24,8 +24,13 @@ Given def id = 2
 #Otra manera, quizás más legible cuando en la ruta hay más de dos carpetas. 
 And url 'http://localhost:8080'
 And def idCliente = 15
-#Esto es equivalente a 'clientes/15/facuras'
+#Esto es equivalente a 'clientes/15/facturas'
 And path 'clientes', idCliente, 'facturas' 
 When method GET
 Then status 200
 And print response
+
+
+
+
+

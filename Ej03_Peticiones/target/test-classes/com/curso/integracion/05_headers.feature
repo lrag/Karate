@@ -1,5 +1,5 @@
 #Feature
-Feature: Pruebas de jsonplaceholder typicode.
+Feature: Http headers
   Bla bla blá.
  
 Background: 
@@ -8,7 +8,7 @@ Background:
 #Aqui content-type está entre comillas por el guión
 * configure headers = { 'Content-Type' : 'application/json' }
  
-Scenario: Enviar una petición para obtener los posts
+Scenario: Headers 1
 Given path '/productos'
 And header Authorization = 'Basic abcd'
 And header Accept = 'application/json'
@@ -23,3 +23,16 @@ And headers { Authorization : 'Basic abcd', Accept : 'application/json' }
 When method GET
 Then status 200
 And print response
+
+
+
+
+
+
+
+
+
+
+
+
+
